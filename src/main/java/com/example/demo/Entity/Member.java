@@ -26,7 +26,7 @@ public class Member {
     private String city;
     @NotBlank
     private String password;
-    @OneToMany(mappedBy = "member",cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "member",cascade = CascadeType.ALL)
     @JsonManagedReference
     private List<Booking> bookings;
 
